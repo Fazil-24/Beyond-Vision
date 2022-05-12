@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} About page {% endblock %}
+{% block head %}
+
+<title>Bootstrap Theme The Band</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .container img {
+      width: 33.33%;
+      height: auto;
+    }
+    
+    .container .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #555;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .container .btn:hover {
+      background-color: black;
+    }
+    </style>
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<br>
+<h2>&emsp; &emsp; Use Cases</h2>
+
+<hr style="width:1000px;height:2px;border-width:0;color:#000;background-color:black">
+<br>
+
+
+
+<div class="row">
+    <div class="column">
+    <div class="container">
+      <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2020-06/malll.jpg" alt="Snow" style="width:100%">
+      <a onclick="myFunction1()" class="btn" href="/cr1">View</a>
+      <a href='/traj1'>Movement Tracking</a>
+      
+    </div>
+    </div>
+    
+    
+    <div class="column">
+    <div class="container">
+      <img src="https://images.indianexpress.com/2020/05/new-delhi-railway-station.jpg" alt="Snow" style="width:100%">
+      <a onclick="myFunction2()" class="btn" href="/cr2">View</a>
+      <a href='/traj2'>Movement Tracking</a>
+    </div>
+    </div>
+   
+    <div class="column">
+    <div class="container">
+      <img src="https://media.smallbiztrends.com/2021/06/types-of-restaurants.png" alt="Snow" style="width:100%">
+      <a onclick="myFunction3()" class="btn" href="/cr3">View</a>
+      <a href='/traj3'>Movement Tracking</a>
+
+    </div>
+    </div>
+    
+    <div class="column">
+    <div class="container">
+      <img src="https://landtransportguru.net/web/wp-content/uploads/2017/07/6591-329-Buangkok-Cres.jpg" alt="Snow" style="width:100%">
+      <a onclick="myFunction4()" class="btn" href="/cr4">View</a>
+      <a href='/traj4'>Movement Tracking</a>
+    </div>
+    </div>
+    
+    <div class="column">
+    <div class="container">
+      <img src="https://media.istockphoto.com/photos/large-group-of-students-on-a-break-in-a-school-hallway-picture-id1128723898" alt="Snow" style="width:100%">
+      <a onclick="myFunction5()" class="btn" href="/cr5">View</a>
+      <a href='/traj5'>Movement Tracking</a>
+    </div>
+    </div>
+    <!-- This is a comment 
+    <div class="column">
+    <div class="container">
+        <img src="https://www.insightdata.co.uk/wp-content/uploads/2017/03/live-data.png" alt="Snow" style="width:80%">
+        <a class="btn" href="/real">View</a>
+       
+    </div>
+    </div> -->
+</div>
+
+
+
+{% endblock %}

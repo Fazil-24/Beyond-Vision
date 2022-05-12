@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} Home page {% endblock %}
+{% block head %}
+
+
+<title>Bootstrap Theme The Band</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Real Time Mask Violation Demonstration</h1>
+
+
+<img id="bg" src="{{ url_for('video_feed') }}">
+
+{% endblock %}

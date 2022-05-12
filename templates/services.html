@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} Home page {% endblock %}
+{% block head %}
+
+
+<title>Bootstrap Theme The Band</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<style>
+      .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    }
+
+      .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+
+      .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+   
+</style>
+
+<style>
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40%;
+  height:100%;
+  
+  padding: 10px; 
+  text-align: center;
+}
+</style>
+
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+    body {
+      background-image: url('https://previews.123rf.com/images/paulfornara/paulfornara1511/paulfornara151100007/47300652-%E4%B8%8A%E8%A8%98%E3%81%AE%E4%BA%BA%E3%80%85.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+</style>
+
+
+<div class="bg-text">
+  
+<div class="container">
+
+    
+    <div class="center">
+        <div class="d-grid gap-0 col-8 mx-1">
+            <br><br>
+      <a class="button" href="/exec1" class="btn btn-outline-dark "><h3><span>Social Distancing </span></h3></a><br>
+      <a class="button" href="/exec2" class="btn btn-outline-dark "><h3><span>Occupancy Analysis </span></h3></a><br>
+      <a class="button" href="/exec3" class="btn btn-outline-dark "><h3><span>Face Mask </span></h3></a><br>
+      <a class="button" href="/exec4" class="btn btn-outline-dark "><h3><span>Attendance </span></h3></a><br>
+      <a class="button" href="/exec5" class="btn btn-outline-dark "><h3><span>Appointment </span></h3></a><br>
+        </div>
+</div>
+</div>
+
+{% endblock %}

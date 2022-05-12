@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} Home page {% endblock %}
+{% block head %}
+
+
+<title>Bootstrap Theme The Band</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+<style>
+.next {
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  
+</style>
+
+<style>
+  .bg-1 {
+    background: #2d2d30;
+    color: #141414;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #bdbdbd;
+  }
+  
+  p.date {
+    text-align: center;
+    text-size-adjust: 4.5;
+  }
+  
+  </style>
+
+
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+
+<style>
+  div.transbox {
+    margin: 10px;
+    background-color: #555;
+    border: 1px solid black;
+    opacity: 0.6;
+    position: absolute;
+    top: 70px;
+    right: -30px;
+    width: 800px;
+    height: 200px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 80px;
+  }
+  img {
+  width: 100%;
+  position: absolute;
+  top: 530px;
+  right: 0px;
+  left:300px
+  }
+  div.absolute {
+  position: absolute;
+  top: 660px;
+  right: 200px;
+  width: 300px;
+  height: 400px;
+  
+}
+div.abs {
+  position: absolute;
+  top: 1170px;
+  right: 780px;
+  width: 300px;
+  height: 400px;
+  
+}
+div.ab{
+  position: absolute;
+  top: 1870px;
+  right: 200px;
+  width: 400px;
+  height: 400px;
+  
+}
+</style>
+
+<style>
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  
+  perspective: 1000px;
+  
+  
+}
+
+.flip-box-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  top: 5%;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #141414;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+</style>
+<style>
+  body {font-family: Arial, Helvetica, sans-serif; color: #000;}
+  * {box-sizing: border-box;}
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  </style>
+
+
+{% endblock %}
+
+
+{% block content %}
+<div style="background-image: url('https://tngonline.ca/wp-content/uploads/2018/08/crowd-management-banner.jpg');background-size: cover; height:380px; padding-top:80px;">
+  <div class="transbox">
+    <p>BEYOND VISION</p>
+  </div>
+</div> 
+<div class="mask" style="background-color: #555">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+        <h1 class="mb-3">ONE VISION MULTI-SOLUTION</h1>
+        </div>
+    </div>
+</div>
+
+<div class="w3-container">
+  <h2>About the Product</h2>
+  <p>&emsp;</p>
+  <div class="w3-card-4 w3-dark-grey w3-hover-shadow w3-center" style="width:40%; height: 30rem; margin: 50px 150px 75px ">
+    
+    <div class="flip-box " style="width:70%; height: 27rem; margin: 20px 95px 50px ">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <h2><br><br><br><br>Crowd Management</h2>
+        </div>
+        <div class="flip-box-back">
+          <h2> <br> <br> Social distancing only works if we all participate. We all are responsible for protecting our loved ones and stop the spread of the virus to save lives. <br> </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute" style="background-image: url('https://c.tenor.com/wRJgJKb4pPYAAAAd/crowd-walking.gif'); background-repeat: no-repeat;background-size: contains; height:1000px; width:550px;"></div>
+    
+  </div>
+</div>
+
+<br>
+<br>
+
+
+<div class="w3-container">
+  <div class="w3-card-4 w3-dark-grey w3-hover-shadow w3-center" style="width:40%; height: 32em; margin: -10px 750px 75px ">
+    
+    <div class="w3-container w3-center">
+    
+      <div class="flip-box " style="width:70%; height: 27rem; margin: 20px 95px 50px ">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2><br><br><br><br>SOP </h2>
+          </div>
+          <div class="flip-box-back">
+            <h2> <br> <br> A way to slow down or stop the spread of infectious diseases by following certain guidelines that ensures safety between you and other people   <br> </h2>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <div class="abs" style="background-image: url('https://images.news18.com/ibnlive/uploads/2020/03/1586352644_6d8ae8e92b8b46eca65dfe94f38275c4-6d8ae8e92b8b46eca65dfe94f38275c4-fc62c0a9fa194bc393da14d7318bc024-449e1-e1586352787774.jpg?impolicy=website&width=0&height=0'); background-repeat: no-repeat; height:1000px; width:550px;"></div>
+    
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="bg-1">
+  <div class="container">
+<h2 style="color:#2d2d30;">Feedback Form</h2>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Select One</option>
+      <option value="australia">India</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+  </div>
+</div>
+<br>
+
+
+<body style="background-color: black"></body>
+
+{% endblock %}

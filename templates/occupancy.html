@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} Home page {% endblock %}
+{% block head %}
+
+<title>Bootstrap Theme The Band</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+</style>
+<style>
+  div.a {
+  position: relative;
+  width: 800px;
+  height: 700px;
+  right:-500px;
+}
+</style>
+
+<style>
+    .center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+
+    .button {
+display: inline-block;
+border-radius: 4px;
+background-color:forestgreen;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 28px;
+padding: 20px;
+width: 200px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+}
+
+
+
+    .button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+ 
+</style>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="w3-row-padding" id="plans">
+    <div class="w3-center w3-padding-64">
+      <h3>Occupancy Analysis</h3>
+      <p>Choose a plan that fits your needs.</p>
+    </div>
+    <div class="a">
+    
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16 w3-light-grey"> OpenCV</li>
+        <li class="w3-padding-16 w3-light-grey"><b>FPS: </b>45</li>
+        <li class="w3-padding-16 w3-light-grey"><b>Speed: </b> 0.2 sec/frame</li>
+        <li class="w3-padding-16 w3-light-grey"><b>loss:</b> 0.7</li>
+        <li class="w3-padding-16 w3-light-grey">
+          <h2 class="w3-wide">Accuracy 88%</h2>
+          <span class="w3-opacity">Testing</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+            <a class="button" href="/oc1" class="btn btn-outline-dark "><h5><span> Proceed </span></h5></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom ">
+      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16 w3-light-grey">Mobilenet SSD</li>
+        <li class="w3-padding-16 w3-light-grey"><b>FPS: </b> 50</li>
+        <li class="w3-padding-16 w3-light-grey"><b>Speed: </b> 0.3sec/frame</li>
+        <li class="w3-padding-16 w3-light-grey"><b>Loss: </b> 0.09</li>
+        <li class="w3-padding-16 w3-light-grey">
+          <h2 class="w3-wide">Accuracy 95%</h2>
+          <span class="w3-opacity">Testing</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+            <a class="button" href="/oc2" class="btn btn-outline-dark "><h5><span> Proceed </span></h5></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+    
+  </div>
+  <style>
+    body {
+      background-image: url('https://www.deutschcenter.com/wp-content/uploads/2018/04/classroom_training.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+</style>
+
+
+
+{% endblock %}

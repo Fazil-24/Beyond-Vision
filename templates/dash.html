@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} Home page {% endblock %}
+{% block head %}
+
+
+<title>Bootstrap Theme The Band</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+<script src="{{url_for('static', filename='d3.v3.min.js')}}"></script>
+<script src="{{url_for('static', filename='c3.min.js')}}"></script>
+<script src="{{url_for('static', filename='papaparse.min.js')}}"></script>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='c3.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}">
+
+
+
+<style>
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-chart {
+  width: 33%;
+  justify-content: space-around ;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+</style>
+
+<style>
+    div.card {
+      width: 1300px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
+      left: 80px;
+    }
+    
+    div.header {
+      background-color: #eee;
+      color: white;
+      padding: 50px;
+      font-size: 40px;
+    }
+    
+    
+</style>
+
+<style>
+    .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+    }
+    .bg-1 h3 {color: #fff;}
+    .bg-1 p {font-style: italic;}
+    .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+    .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+    .thumbnail p {
+      margin-top: 15px;
+      color: #bdbdbd;
+    }
+   
+    
+</style>
+    
+<style>
+
+    .flex-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    
+    .single-chart {
+      width: 50%;
+      justify-content: space-around ;
+    }
+    
+    .circular-chart {
+      display: block;
+      margin: 10px auto;
+      max-width: 80%;
+      max-height: 250px;
+    }
+    
+    .circle-bg {
+      fill: none;
+      stroke: #eee;
+      stroke-width: 3.8;
+    }
+    
+    .circle {
+      fill: none;
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      animation: progress 1s ease-out forwards;
+    }
+    
+    @keyframes progress {
+      0% {
+        stroke-dasharray: 0 100;
+      }
+    }
+    
+    .circular-chart.orange .circle {
+      stroke: #ff9f00;
+    }
+    
+    .circular-chart.green .circle {
+      stroke: #4CC790;
+    }
+    
+    .circular-chart.blue .circle {
+      stroke: #3c9ee5;
+    }
+    
+    .percentage {
+      fill: #666;
+      font-family: sans-serif;
+      font-size: 0.5em;
+      text-anchor: middle;
+    }
+    
+</style>
+
+<style> 
+
+    #rcorners2 {
+      position: relative;
+      border-radius: 35px;
+      border: 2px solid #0a051f;
+      padding: 10px; 
+      width: 900px;
+      height: 350px; 
+      left: 250px;
+     
+    }
+    
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<!--
+<div div style = "position:relative; left:80px; top:2px;" >
+
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+    <script>
+    
+    
+    
+    var xArray = [50,60,70,80,90,100,110,120,130,140,150];
+    var yArray = [7,8,8,9,9,9,10,11,14,14,15];
+    
+    // Define Data
+    var data = [{
+      x: xArray,
+      y: yArray,
+      mode:"lines"
+    }];
+    
+    // Define Layout
+    var layout = {
+      xaxis: {range: [40, 160], title: "Time"},
+      yaxis: {range: [5, 16], title: "Movement"},  
+      title: "Crowd Movement vs Time"
+    };
+    
+    // Display using Plotly
+    Plotly.newPlot("myPlot", data, layout);
+    </script>
+    
+
+</div>
+-->
+
+<div class="bg-1">
+    <br>
+    <div class="container">
+      <h1 class="text-center">DASHBOARD</h1>
+    </div>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<h2 class="text-center">Crowd Density Analysis</h2>
+<div class="card">
+    <div class="header">
+        <div class="container">
+            <div id="chart"></div>
+        </div>
+        <script src="{{url_for('static', filename='create-graph.js')}}"></script>
+    </div>
+</div> 
+<br>
+<br> 
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+        <div id="rcorners2">
+        <div class="flex-wrapper">
+            <div class="single-chart">
+              <svg viewBox="0 0 36 36" class="circular-chart orange">
+                <path class="circle-bg"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path class="circle"
+                  stroke-dasharray="30, 100"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" class="percentage">7</text>
+              </svg>
+              <P>&emsp; &emsp; Average Crowd density</p>
+            </div>
+            
+            <div class="single-chart">
+              <svg viewBox="0 0 36 36" class="circular-chart green">
+                <path class="circle-bg"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path class="circle"
+                  stroke-dasharray="60, 100"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" class="percentage">4</text>
+              </svg>
+              <P>&emsp; &emsp; &emsp;  Mean distance violation</p>
+            </div>
+    </div>
+</div> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

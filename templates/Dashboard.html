@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} Home page {% endblock %}
+{% block head %}
+
+
+<title>Bootstrap Theme The Band</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<style> 
+
+    #rcorners2 {
+      
+      border-radius: 25px;
+      border: 2px solid #0a051f;
+      padding: 20px; 
+      width: 1200px;
+      height: 350px; 
+     
+    }
+    
+</style>
+
+<style>
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-chart {
+  width: 33%;
+  justify-content: space-around ;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+</style>
+
+<style>
+    h1 {text-align: center;}
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1 >Under Progress</h1>
+<br><br>
+<body style="background-color:ghostwhite"; opacity="0.4"></body>
+<h3>Crowd Analytics</h3>
+<div div style = "position:relative; left:80px; top:2px;" >
+<div id="rcorners2">
+
+    <div class="flex-wrapper">
+        <div class="single-chart">
+          <svg viewBox="0 0 36 36" class="circular-chart orange">
+            <path class="circle-bg"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+              stroke-dasharray="30, 100"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="20.35" class="percentage">30%</text>
+          </svg>
+          <P>&emsp; &emsp;  Crowd density</p>
+        </div>
+        
+        <div class="single-chart">
+          <svg viewBox="0 0 36 36" class="circular-chart green">
+            <path class="circle-bg"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+              stroke-dasharray="60, 100"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="20.35" class="percentage">60%</text>
+          </svg>
+          <P>&emsp; &emsp; &emsp;  Face Mask</p>
+        </div>
+      
+        <div class="single-chart">
+          <svg viewBox="0 0 36 36" class="circular-chart blue">
+            <path class="circle-bg"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle"
+              stroke-dasharray="90, 100"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="20.35" class="percentage">90%</text>
+          </svg>
+          <P>&emsp; &emsp;  Social distance violation<p>
+        </div>
+      </div>
+
+   
+
+</div>
+
+<hr style="width:1000px;height:2px;border-width:0;color:#000;background-color:black">
+</div>
+<br>
+<br>
+
+<div div style = "position:relative; left:80px; top:2px;" >
+
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+    <script>
+    
+    var xArray = [50,60,70,80,90,100,110,120,130,140,150];
+    var yArray = [7,8,8,9,9,9,10,11,14,14,15];
+    
+    // Define Data
+    var data = [{
+      x: xArray,
+      y: yArray,
+      mode:"lines"
+    }];
+    
+    // Define Layout
+    var layout = {
+      xaxis: {range: [40, 160], title: "Time"},
+      yaxis: {range: [5, 16], title: "Movement"},  
+      title: "Crowd Movement vs Time"
+    };
+    
+    // Display using Plotly
+    Plotly.newPlot("myPlot", data, layout);
+    </script>
+    
+
+</div>
+
+{% endblock %}

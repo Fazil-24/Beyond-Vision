@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %} About page {% endblock %}
+{% block head %}
+
+<title>Bootstrap Theme The Band</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.bg-1 {
+  background: #2d2d30;
+  color: #bdbdbd;
+}
+.bg-1 h3 {color: #fff;}
+.bg-1 p {font-style: italic;}
+.list-group-item:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
+}
+.thumbnail p {
+  margin-top: 15px;
+  color: #bdbdbd;
+}
+
+p.date {
+  text-align: center;
+  text-size-adjust: 4.5;
+}
+
+</style>
+
+<style>
+    div.transbox {
+      margin: 10px;
+      background-color: #555;
+      border: 1px solid black;
+      opacity: 0.6;
+      position: absolute;
+      top: 70px;
+      right: -30px;
+      width: 800px;
+      height: 200px;
+      font-weight: bold;
+      color: #fff;
+      font-size: 80px;
+    }
+    
+  </style>
+
+<style>
+  .centerImage
+  {
+   
+   display:block;
+   margin-left: 700px;
+   margin-top: -300px;
+  }
+</style>
+<style>
+  .flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    
+    perspective: 1000px;
+    
+    
+  }
+  
+  .flip-box-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 5%;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-color: #141414;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+</style>
+<style>
+  div.abs {
+  position: absolute;
+  top: 1370px;
+  right: 780px;
+  width: 300px;
+  height: 400px;
+  
+}
+</style>
+<style>
+  div.d {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  </style>
+
+<style>
+  
+  .zoom:hover {
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3); 
+  }
+  </style>
+  
+{% endblock %}
+
+
+{% block content %}
+
+<div style="background-image: url('https://tngonline.ca/wp-content/uploads/2018/08/crowd-management-banner.jpg');background-size: cover; height:380px; padding-top:80px;">
+<div class="transbox">
+    <p>BEYOND VISION</p>
+  </div>
+</div> 
+<div class="mask" style="background-color: #2d2d30">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+        <h1 class="mb-3">ONE VISION MULTI-SOLUTION</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="w3-container">
+  <div class="col-sm-4"></div>
+    <h1 class="text-center"> </h1>
+    <div class="thumbnail">
+    
+    <div class="w3-panel w3-card-4 w3-leftbar w3-sand w3-center  w3-serif "  style="width:30%; margin: auto; "> 
+      
+      <p style="margin-top:-10px"><i><b><img src= "https://nasshop.vn/mscontent/uploads/2021/02/Consumer-Network-Attached-Storage-Nas-Market-Assessment-and-Key-Insights.gif" alt="Paris" width="400" height="200" align="right" >
+        <h2><br>Visualize the amazing experience of video analysis with just one click</h2></b></i></p>
+        
+      <span style="font-size:100px"></span>
+      
+    </div>
+    <!--<img src= "https://i.pinimg.com/originals/d7/ae/b2/d7aeb287ecdf1f6e865390bf5ac3834d.gif" alt="Paris" width="400" height="200" align="left"> -->
+    
+  </div>
+</div>
+</div>
+ 
+
+
+<div class="bg-1">
+  <div class="container">
+    <h3 class="text-center"><br><br>OUR SERVICES</h3>
+    <p class="text-center">Safety is our priority</p>
+    
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src= "https://assets.avigilon.com/images/heroes/Social%20Distancing.jpg" alt="Paris" width="400" height="200" class="zoom">
+          <p><strong>Social Distance tracking</strong></p>
+          
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://www.osfhealthcare.org/blog/wp-content/uploads/2020/04/face-masking-765x310.jpg" alt="New York" width="400" height="200" class="zoom">
+          <p><strong>Mask Monitoring</strong></p>
+          
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://img.freepik.com/free-photo/crowd-anonymous-people-walking-city-street_51195-3724.jpg?w=1380" alt="San Francisco" width="400" height="200" class="zoom">
+          <p><strong>Crowd analysis</strong></p>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+
+<div class="bg-1">
+  <div class="container">
+    
+    <br>
+    <br>
+    <p class="date"><br></p>
+    <div class="w3-card-4 w3-dark-grey w3-hover-shadow w3-center" style="width:40%; height: 32em; margin: -10px 750px 75px ">
+    
+      <div class="w3-container w3-center">
+      
+        <div class="flip-box " style="width:70%; height: 27rem; margin: 20px 95px 50px ">
+         
+            
+             <div class="d"> <h3><br>&nbsp;&nbsp;RESPONSIBLE AI<br><br>The development of AI is creating new opportunities to improve the lives of people around the world,from business to healthcare to education. It is also raising new questions about the best way to build fairness, interpretability, privacy, and security into these systems. <br></h3>
+             </div>
+                </div>
+            
+             
+           
+          </div>
+        </div>
+    
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    <div class="abs" style="background-image: url('https://readitquik.com/wp-content/uploads/2022/02/ai-1.gif'); background-repeat: no-repeat; background-size: cover; height:500px; width:550px;">
+    </div>
+    <br>
+  </div> 
+</div>  
+<div class="bg-1">
+  <div class="container">
+    <h3 class="text-center">UPCOMING SERVICES</h3>
+    <br>
+    <h2 > &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Customized Object Detection &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; Edge AI </h2>
+    
+    <img src= "https://miro.medium.com/max/900/1*EYtn2YE7b6MTzMQyD2R3nA.jpeg" alt="Paris" width="550" height="300"  >
+    <img src= "https://us.123rf.com/450wm/artmagination/artmagination1903/artmagination190300024/119663542-surveillance-camera-on-wall-with-futuristic-interface-around-its-lens-as-it-analyzes-surroundings-3d.jpg?ver=6" alt="Paris" width="500" height="300" class="centerImage" >
+
+    <br>
+    <br>
+    <br>
+    </div>
+</div>
+
+<body style="background-color: #fff"></body>
+
+{% endblock %}
