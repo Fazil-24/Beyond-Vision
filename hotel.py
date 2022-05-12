@@ -1,0 +1,53 @@
+import datetime
+
+# Video Path
+VIDEO_CONFIG = {
+	"VIDEO_CAP" : "video/restaurant.mp4",
+	"IS_CAM" : False,
+	"CAM_APPROX_FPS": 30,
+	"HIGH_CAM": True,
+	"START_TIME": datetime.datetime(2022, 4, 13, 11, 30, 30, 15)
+}
+
+# Load YOLOv3-tiny weights and config
+YOLO_CONFIG = {
+	"WEIGHTS_PATH" : "YOLOv4-tiny/yolov4-tiny.weights",
+	"CONFIG_PATH" : "YOLOv4-tiny/yolov4-tiny.cfg"
+}
+# Show individuals detected
+SHOW_PROCESSING_OUTPUT = True
+# Show individuals detected
+SHOW_DETECT = True
+# Data record
+DATA_RECORD = True
+# Data record rate (data record per frame)
+DATA_RECORD_RATE = 5
+# Check for restricted entry
+RE_CHECK = False
+# Restricted entry time (H:M:S)
+RE_START_TIME = datetime.time(0,0,0) 
+RE_END_TIME = datetime.time(23,0,0)
+# Check for social distance violation
+SD_CHECK = True
+# Show violation count
+SHOW_VIOLATION_COUNT = True
+# Show tracking id
+SHOW_TRACKING_ID = True
+# Threshold for distance violation
+SOCIAL_DISTANCE = 50
+# Check for abnormal crowd activity
+ABNORMAL_CHECK = False
+# Min number of people to check for abnormal
+ABNORMAL_MIN_PEOPLE = 5
+# Abnormal energy level threshold
+ABNORMAL_ENERGY = 1866
+# Abnormal activity ratio threhold
+ABNORMAL_THRESH = 0.66
+# Threshold for human detection minumun confindence
+MIN_CONF = 0.3
+# Threshold for Non-maxima surpression
+NMS_THRESH = 0.2
+# Resize frame for processing
+FRAME_SIZE = 1080
+# Tracker max missing age before removing (seconds)
+TRACK_MAX_AGE = 3
